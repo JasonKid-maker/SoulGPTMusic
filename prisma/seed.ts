@@ -25,7 +25,7 @@ const main = async () => {
         id: item.id,
         title: item.title,
         artistId: item.user_id,
-        artistName: item.display_name,
+        artistName: item.display_name?? "Unknown Artist",
         audioUrl: item.audio_url,
         imageUrl: item.image_url,
         imageLargeUrl: item.image_large_url,
