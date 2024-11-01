@@ -186,20 +186,20 @@ export const changePlan = async (currentPlanId: string, newPlanId: string) => {
   revalidatePath("/");
 };
 
-export const storeWebhookEvent = async (
-  eventName: string,
-  body: NewWebhookEvent["body"]
-) => {
-  const returnedValue = await prisma.lemonSqueezyWebhookEvent.create({
-    data: {
-      eventName,
-      body,
-      processed: false,
-    },
-  });
+// export const storeWebhookEvent = async (
+//   eventName: string,
+//   body: NewWebhookEvent["body"]
+// ) => {
+//   const returnedValue = await prisma.lemonSqueezyWebhookEvent.create({
+//     data: {
+//       eventName,
+//       body,
+//       processed: false,
+//     },
+//   });
 
-  return returnedValue;
-};
+//   return returnedValue;
+// };
 
 export const processWebhookEvent = async (
   webhookEvent: LemonSqueezyWebhookEvent
